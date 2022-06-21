@@ -9,8 +9,9 @@
     <title>Defining Parametric Workflows &#8212; pyfluent-parametric</title>
     
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,21 +21,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     
         <link href="../_static/css/breadcrumbs.css" rel="stylesheet">
@@ -48,6 +46,7 @@
     <script src="../_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="API Reference" href="../api/index.html" />
@@ -59,7 +58,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -77,7 +76,7 @@
     
     
 
-<a class="navbar-brand" href="https://docs.pyansys.com/">
+<a class="navbar-brand" href="https://www.ansys.com/">
   <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
 </a>
 
@@ -133,20 +132,20 @@
       
     </div>
 
+    
     <div id="navbar-end">
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/pyansys/pyfluent-parametric" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/pyansys/pyfluent-parametric" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
     </div>
+    
   </div>
 </div>
     </nav>
@@ -182,7 +181,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -197,6 +197,9 @@
 
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -207,7 +210,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -342,13 +345,13 @@
               <div>
                 
   <section id="defining-parametric-workflows">
-<h1>Defining Parametric Workflows<a class="headerlink" href="#defining-parametric-workflows" title="Permalink to this headline">¶</a></h1>
+<h1>Defining Parametric Workflows<a class="headerlink" href="#defining-parametric-workflows" title="Permalink to this headline">#</a></h1>
 <p>PyFluent supports parametric workflows in Fluent.</p>
 <section id="parametric-study">
-<h2>Parametric Study<a class="headerlink" href="#parametric-study" title="Permalink to this headline">¶</a></h2>
+<h2>Parametric Study<a class="headerlink" href="#parametric-study" title="Permalink to this headline">#</a></h2>
 <p>Here is a simple example:</p>
 <section id="creating-input-parameters">
-<h3>Creating Input Parameters<a class="headerlink" href="#creating-input-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>Creating Input Parameters<a class="headerlink" href="#creating-input-parameters" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can create input parameters:
 inlet1_vel, inlet1_temp, inlet2_vel and inlet2_temp</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -379,7 +382,7 @@ inlet1_vel, inlet1_temp, inlet2_vel and inlet2_temp</p>
 </div>
 </section>
 <section id="creating-output-parameters">
-<h3>Creating Output Parameters<a class="headerlink" href="#creating-output-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>Creating Output Parameters<a class="headerlink" href="#creating-output-parameters" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can create output parameters:
 outlet-temp-avg and outlet-vel-avg</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">solution</span><span class="o">.</span><span class="n">report_definitions</span><span class="o">.</span><span class="n">surface</span><span class="p">[</span><span class="s2">&quot;outlet-temp-avg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
@@ -413,14 +416,14 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="instantiating-a-parametric-study">
-<h3>Instantiating a parametric study<a class="headerlink" href="#instantiating-a-parametric-study" title="Permalink to this headline">¶</a></h3>
+<h3>Instantiating a parametric study<a class="headerlink" href="#instantiating-a-parametric-study" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can instantiate a parametric study:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_1</span> <span class="o">=</span> <span class="n">ParametricStudy</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">parametric_studies</span><span class="p">)</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="accessing-and-modifying-input-parameters-of-the-base-design-point">
-<h3>Accessing and Modifying Input Parameters of the Base Design Point<a class="headerlink" href="#accessing-and-modifying-input-parameters-of-the-base-design-point" title="Permalink to this headline">¶</a></h3>
+<h3>Accessing and Modifying Input Parameters of the Base Design Point<a class="headerlink" href="#accessing-and-modifying-input-parameters-of-the-base-design-point" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can access and modify input parameters of the base design point:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">input_parameters_update</span> <span class="o">=</span> <span class="n">study_1</span><span class="o">.</span><span class="n">design_points</span><span class="p">[</span><span class="s2">&quot;Base DP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">input_parameters</span>
 <span class="n">input_parameters_update</span><span class="p">[</span><span class="s2">&quot;inlet1_vel&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -429,14 +432,14 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="updating-the-current-design-point">
-<h3>Updating the Current Design Point<a class="headerlink" href="#updating-the-current-design-point" title="Permalink to this headline">¶</a></h3>
+<h3>Updating the Current Design Point<a class="headerlink" href="#updating-the-current-design-point" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can update the current design point:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_1</span><span class="o">.</span><span class="n">update_current_design_point</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="adding-new-design-points">
-<h3>Adding New Design Points<a class="headerlink" href="#adding-new-design-points" title="Permalink to this headline">¶</a></h3>
+<h3>Adding New Design Points<a class="headerlink" href="#adding-new-design-points" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how to add new design points:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">design_point_1</span> <span class="o">=</span> <span class="n">study_1</span><span class="o">.</span><span class="n">add_design_point</span><span class="p">()</span>
 <span class="n">design_point_1_input_parameters</span> <span class="o">=</span> <span class="n">study_1</span><span class="o">.</span><span class="n">design_points</span><span class="p">[</span><span class="s2">&quot;DP1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">input_parameters</span>
@@ -448,21 +451,21 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="duplicating-design-points">
-<h3>Duplicating Design Points<a class="headerlink" href="#duplicating-design-points" title="Permalink to this headline">¶</a></h3>
+<h3>Duplicating Design Points<a class="headerlink" href="#duplicating-design-points" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can duplicate a design point:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">design_point_2</span> <span class="o">=</span> <span class="n">study_1</span><span class="o">.</span><span class="n">duplicate_design_point</span><span class="p">(</span><span class="n">design_point_1</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="updating-all-design-points">
-<h3>Updating All Design Points<a class="headerlink" href="#updating-all-design-points" title="Permalink to this headline">¶</a></h3>
+<h3>Updating All Design Points<a class="headerlink" href="#updating-all-design-points" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can update all design points in your study:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_1</span><span class="o">.</span><span class="n">update_all_design_points</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="exporting-the-design-point-table">
-<h3>Exporting the Design Point Table<a class="headerlink" href="#exporting-the-design-point-table" title="Permalink to this headline">¶</a></h3>
+<h3>Exporting the Design Point Table<a class="headerlink" href="#exporting-the-design-point-table" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can export the design point table as a comma separated value (CSV) table:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">design_point_table</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
     <span class="n">Path</span><span class="p">(</span><span class="n">pyfluent</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;design_point_table_study_1.csv&quot;</span>
@@ -472,35 +475,35 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="deleting-design-points">
-<h3>Deleting Design Points<a class="headerlink" href="#deleting-design-points" title="Permalink to this headline">¶</a></h3>
+<h3>Deleting Design Points<a class="headerlink" href="#deleting-design-points" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can remove design points:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_1</span><span class="o">.</span><span class="n">delete_design_points</span><span class="p">([</span><span class="n">design_point_1</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
 <section id="id1">
-<h3>Duplicating Design Points<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Duplicating Design Points<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can copy design points:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_2</span> <span class="o">=</span> <span class="n">study_1</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="renaming-studies">
-<h3>Renaming Studies<a class="headerlink" href="#renaming-studies" title="Permalink to this headline">¶</a></h3>
+<h3>Renaming Studies<a class="headerlink" href="#renaming-studies" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can change the name of your study:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;New Study&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="deleting-studies">
-<h3>Deleting Studies<a class="headerlink" href="#deleting-studies" title="Permalink to this headline">¶</a></h3>
+<h3>Deleting Studies<a class="headerlink" href="#deleting-studies" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can remove old parametric studies:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">study_1</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="saving-your-study-and-closing-fluent">
-<h3>Saving Your Study and Closing Fluent<a class="headerlink" href="#saving-your-study-and-closing-fluent" title="Permalink to this headline">¶</a></h3>
+<h3>Saving Your Study and Closing Fluent<a class="headerlink" href="#saving-your-study-and-closing-fluent" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can save your work and close the Fluent instance:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project_filepath</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">pyfluent</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;static_mixer_study.flprj&quot;</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">tui</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">parametric_project</span><span class="o">.</span><span class="n">save_as</span><span class="p">(</span><span class="n">project_filepath</span><span class="p">)</span>
@@ -509,7 +512,7 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="resuming-your-work">
-<h3>Resuming Your Work<a class="headerlink" href="#resuming-your-work" title="Permalink to this headline">¶</a></h3>
+<h3>Resuming Your Work<a class="headerlink" href="#resuming-your-work" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can re-start Fluent and read in a previously saved project:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span> <span class="o">=</span> <span class="n">pyfluent</span><span class="o">.</span><span class="n">launch_fluent</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="s2">&quot;double&quot;</span><span class="p">,</span> <span class="n">processor_count</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">project_filepath_read</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">pyfluent</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;static_mixer_study.flprj&quot;</span><span class="p">)</span>
@@ -522,14 +525,14 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="saving-your-work">
-<h3>Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permalink to this headline">¶</a></h3>
+<h3>Saving Your Work<a class="headerlink" href="#saving-your-work" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can save your current project:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="saving-your-work-with-a-different-name">
-<h3>Saving Your Work With a Different Name<a class="headerlink" href="#saving-your-work-with-a-different-name" title="Permalink to this headline">¶</a></h3>
+<h3>Saving Your Work With a Different Name<a class="headerlink" href="#saving-your-work-with-a-different-name" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can save your current project to a different file name:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project_filepath_save_as</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
     <span class="n">Path</span><span class="p">(</span><span class="n">pyfluent</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;static_mixer_study_save_as.flprj&quot;</span>
@@ -539,7 +542,7 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="exporting-your-work">
-<h3>Exporting Your Work<a class="headerlink" href="#exporting-your-work" title="Permalink to this headline">¶</a></h3>
+<h3>Exporting Your Work<a class="headerlink" href="#exporting-your-work" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can export the current project:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project_filepath_export</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
     <span class="n">Path</span><span class="p">(</span><span class="n">pyfluent</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;static_mixer_study_export.flprj&quot;</span>
@@ -549,14 +552,14 @@ outlet-temp-avg and outlet-vel-avg</p>
 </div>
 </section>
 <section id="archiving-projects">
-<h3>Archiving Projects<a class="headerlink" href="#archiving-projects" title="Permalink to this headline">¶</a></h3>
+<h3>Archiving Projects<a class="headerlink" href="#archiving-projects" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can archive your current project:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span><span class="o">.</span><span class="n">archive</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="closing-fluent">
-<h3>Closing Fluent<a class="headerlink" href="#closing-fluent" title="Permalink to this headline">¶</a></h3>
+<h3>Closing Fluent<a class="headerlink" href="#closing-fluent" title="Permalink to this headline">#</a></h3>
 <p>The following example demonstrates how you can end your Fluent session:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
@@ -575,7 +578,8 @@ outlet-temp-avg and outlet-vel-avg</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
