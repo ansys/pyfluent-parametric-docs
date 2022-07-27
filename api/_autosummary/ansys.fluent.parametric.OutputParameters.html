@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>delete &#8212; pyfluent-parametric</title>
+    <title>ansys.fluent.parametric.OutputParameters &#8212; pyfluent-parametric</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -49,8 +49,8 @@
     <link rel="shortcut icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="delete_design_points" href="ansys.fluent.parametric.ParametricStudy.delete_design_points.html" />
-    <link rel="prev" title="clear_generated_data" href="ansys.fluent.parametric.ParametricStudy.clear_generated_data.html" />
+    <link rel="next" title="Examples" href="../../examples/index.html" />
+    <link rel="prev" title="get_unit_label" href="ansys.fluent.parametric.InputParameters.get_unit_label.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -167,9 +167,8 @@
     
 
           <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
-          <li class="nav-item nav-item-2"><a href="../parametric.html" >Parameters</a> » </li>
-          <li class="nav-item nav-item-3"><a href="ansys.fluent.parametric.ParametricStudy.html" accesskey="U">ansys.fluent.parametric.ParametricStudy</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">delete</a></li> 
+          <li class="nav-item nav-item-2"><a href="../parametric.html" accesskey="U">Parameters</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">ansys.fluent.parametric.OutputParameters</a></li> 
       </ul>
     </div>
         </div>
@@ -232,16 +231,16 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active has-children">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.html">
      ansys.fluent.parametric.ParametricStudy
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.add_design_point.html">
        add_design_point
@@ -252,8 +251,8 @@
        clear_generated_data
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.delete.html">
        delete
       </a>
      </li>
@@ -361,8 +360,8 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.OutputParameters.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      ansys.fluent.parametric.OutputParameters
     </a>
    </li>
@@ -407,17 +406,38 @@
               
               <div>
                 
-  <section id="delete">
-<h1>delete<a class="headerlink" href="#delete" title="Permalink to this headline">#</a></h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="ansys.fluent.parametric.ParametricStudy.delete">
-<span class="sig-prename descclassname"><span class="pre">ParametricStudy.</span></span><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.ParametricStudy.delete" title="Permalink to this definition">#</a></dt>
-<dd><p>Delete the parametric study.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
-</dd>
-</dl>
+  <section id="ansys-fluent-parametric-outputparameters">
+<h1>ansys.fluent.parametric.OutputParameters<a class="headerlink" href="#ansys-fluent-parametric-outputparameters" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.fluent.parametric.OutputParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.fluent.parametric.</span></span><span class="sig-name descname"><span class="pre">OutputParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.OutputParameters" title="Permalink to this definition">#</a></dt>
+<dd><p>Class to access output parameter values in Fluent.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">outp</span> <span class="o">=</span> <span class="n">OutputParameters</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">outp</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="go">[(&#39;report-def-1&#39;, &#39;10 [Pa]&#39;), (&#39;report-def-2&#39;, &#39;20 [Pa]&#39;)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">outp</span><span class="p">[</span><span class="s1">&#39;report-def-1&#39;</span><span class="p">]</span>
+<span class="go">&#39;10 [Pa]&#39;</span>
+</pre></div>
+</div>
+<p class="rubric">Methods</p>
+<table class="table">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>__getitem__(name)</strong></p></td>
+<td><p>Get value of an output parameter.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>__len__()</strong></p></td>
+<td><p>Get the number of output parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>__iter__()</strong></p></td>
+<td><p>Get an iterator over output parameters.</p></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </section>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>delete &#8212; pyfluent-parametric</title>
+    <title>get_unit_label &#8212; pyfluent-parametric</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -49,8 +49,8 @@
     <link rel="shortcut icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="delete_design_points" href="ansys.fluent.parametric.ParametricStudy.delete_design_points.html" />
-    <link rel="prev" title="clear_generated_data" href="ansys.fluent.parametric.ParametricStudy.clear_generated_data.html" />
+    <link rel="next" title="ansys.fluent.parametric.OutputParameters" href="ansys.fluent.parametric.OutputParameters.html" />
+    <link rel="prev" title="ansys.fluent.parametric.InputParameters" href="ansys.fluent.parametric.InputParameters.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -168,8 +168,8 @@
 
           <li class="nav-item nav-item-1"><a href="../index.html" >API Reference</a> » </li>
           <li class="nav-item nav-item-2"><a href="../parametric.html" >Parameters</a> » </li>
-          <li class="nav-item nav-item-3"><a href="ansys.fluent.parametric.ParametricStudy.html" accesskey="U">ansys.fluent.parametric.ParametricStudy</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">delete</a></li> 
+          <li class="nav-item nav-item-3"><a href="ansys.fluent.parametric.InputParameters.html" accesskey="U">ansys.fluent.parametric.InputParameters</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">get_unit_label</a></li> 
       </ul>
     </div>
         </div>
@@ -232,16 +232,16 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active has-children">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.html">
      ansys.fluent.parametric.ParametricStudy
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.add_design_point.html">
        add_design_point
@@ -252,8 +252,8 @@
        clear_generated_data
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.delete.html">
        delete
       </a>
      </li>
@@ -344,18 +344,18 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="ansys.fluent.parametric.InputParameters.html">
      ansys.fluent.parametric.InputParameters
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
     <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ansys.fluent.parametric.InputParameters.get_unit_label.html">
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        get_unit_label
       </a>
      </li>
@@ -407,15 +407,29 @@
               
               <div>
                 
-  <section id="delete">
-<h1>delete<a class="headerlink" href="#delete" title="Permalink to this headline">#</a></h1>
+  <section id="get-unit-label">
+<h1>get_unit_label<a class="headerlink" href="#get-unit-label" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
-<dt class="sig sig-object py" id="ansys.fluent.parametric.ParametricStudy.delete">
-<span class="sig-prename descclassname"><span class="pre">ParametricStudy.</span></span><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.ParametricStudy.delete" title="Permalink to this definition">#</a></dt>
-<dd><p>Delete the parametric study.</p>
+<dt class="sig sig-object py" id="ansys.fluent.parametric.InputParameters.get_unit_label">
+<span class="sig-prename descclassname"><span class="pre">InputParameters.</span></span><span class="sig-name descname"><span class="pre">get_unit_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.InputParameters.get_unit_label" title="Permalink to this definition">#</a></dt>
+<dd><p>Get Fluent’s unit label of an input parameter.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the input parameter</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></dt><dd><p>Fluent’s unit label</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

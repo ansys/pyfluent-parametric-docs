@@ -337,16 +337,33 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.current_study_name.html">
-       current_study_name
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.is_current.html">
        is_current
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ansys.fluent.parametric.InputParameters.html">
+     ansys.fluent.parametric.InputParameters
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ansys.fluent.parametric.InputParameters.get_unit_label.html">
+       get_unit_label
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ansys.fluent.parametric.OutputParameters.html">
+     ansys.fluent.parametric.OutputParameters
+    </a>
    </li>
   </ul>
  </li>
@@ -393,7 +410,7 @@
 <h1>ansys.fluent.parametric.ParametricStudy<a class="headerlink" href="#ansys-fluent-parametric-parametricstudy" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.fluent.parametric.ParametricStudy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.fluent.parametric.</span></span><span class="sig-name descname"><span class="pre">ParametricStudy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parametric_studies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">design_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.ParametricStudy" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.fluent.parametric.</span></span><span class="sig-name descname"><span class="pre">ParametricStudy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parametric_studies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">design_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.ParametricStudy" title="Permalink to this definition">#</a></dt>
 <dd><p>Class to manage design points.</p>
 <p>Parametric study that manages design points to parametrize a
 Fluent solver set-up. Provides ability to run Fluent for a series
@@ -550,10 +567,7 @@ of design points, and access/modify the input and output parameters.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.current_design_point.html#ansys.fluent.parametric.ParametricStudy.current_design_point" title="ansys.fluent.parametric.ParametricStudy.current_design_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParametricStudy.current_design_point</span></code></a></p></td>
 <td><p>Return the current design point.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.current_study_name.html#ansys.fluent.parametric.ParametricStudy.current_study_name" title="ansys.fluent.parametric.ParametricStudy.current_study_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParametricStudy.current_study_name</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.is_current.html#ansys.fluent.parametric.ParametricStudy.is_current" title="ansys.fluent.parametric.ParametricStudy.is_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParametricStudy.is_current</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.is_current.html#ansys.fluent.parametric.ParametricStudy.is_current" title="ansys.fluent.parametric.ParametricStudy.is_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParametricStudy.is_current</span></code></a></p></td>
 <td><p>Whether the parametric study is the current parametric study.</p></td>
 </tr>
 </tbody>
