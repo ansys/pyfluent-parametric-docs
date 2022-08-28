@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>pyfluent-parametric Documentation 0.5.dev0 &#8212; pyfluent-parametric</title>
+    <title>PyFluent-Parametric documentation 0.5.dev0 &#8212; PyFluent-Parametric</title>
     
     
   <!-- Loaded before other Sphinx assets -->
@@ -45,11 +45,11 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="_static/ansys-favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="getting_started/index.html" />
+    <link rel="next" title="Getting started" href="getting_started/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,19 +97,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="getting_started/index.html">
-  Getting Started
+  Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="users_guide/index.html">
-  User Guide
+  User guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api/index.html">
-  API Reference
+  API reference
  </a>
 </li>
 
@@ -163,7 +163,7 @@
     
     
 
-        <li class="nav-item nav-item-this"><a href="">pyfluent-parametric Documentation 0.5.dev0</a></li> 
+        <li class="nav-item nav-item-this"><a href="">PyFluent-Parametric documentation 0.5.dev0</a></li> 
       </ul>
     </div>
         </div>
@@ -211,18 +211,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-pyfluent">
-   What is PyFluent?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#features">
-   Features
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#documentation-and-issues">
-   Documentation and Issues
+   Documentation and issues
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -232,7 +222,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#project-index">
-   Project Index
+   Project index
   </a>
  </li>
 </ul>
@@ -257,67 +247,39 @@
               <div>
                 
   <section id="pyfluent-parametric-documentation-version">
-<h1>pyfluent-parametric Documentation 0.5.dev0<a class="headerlink" href="#pyfluent-parametric-documentation-version" title="Permalink to this headline">#</a></h1>
+<h1>PyFluent-Parametric documentation 0.5.dev0<a class="headerlink" href="#pyfluent-parametric-documentation-version" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Ansys Fluent is a state-of-the-art computational fluid dynamics (CFD) software
-package for modeling fluid flow, heat transfer, and chemical reactions in
-complex geometries.</p>
-<p>Ansys Fluent provides complete mesh flexibility, including the ability to solve
-your flow problems using unstructured meshes that can be generated about complex
-geometries with relative ease. Supported mesh types include 2D
-triangular/quadrilateral, 3D tetrahedral/hexahedral/pyramid/wedge/polyhedral,
-and mixed (hybrid) meshes. Ansys Fluent also enables you to refine or coarsen
-your mesh based on the flow solution.</p>
-<p>You can read your mesh into Ansys Fluent, or, for 3D geometries, create your
-mesh using the meshing mode of Fluent. All other operations are performed within
-the solution mode of Fluent, including setting boundary conditions, defining
-fluid properties, executing the solution, refining the mesh, running a parametric study,
-and postprocessing and viewing the results.</p>
-</section>
-<section id="what-is-pyfluent">
-<h2>What is PyFluent?<a class="headerlink" href="#what-is-pyfluent" title="Permalink to this headline">#</a></h2>
-<p>PyFluent is part of the <a class="reference external" href="https://docs.pyansys.com">PyAnsys</a> ecosystem that
-lets you use Ansys Fluent within or alongside any other Python environment,
+<p>PyFluent-Parametric provides scripting of a parametric study using Ansys Fluent.
+It is part of the <a class="reference external" href="https://docs.pyansys.com">PyAnsys</a> ecosystem that
+lets you use Fluent within or alongside any other Python environment,
 whether it is in conjunction with other Ansys Python libraries and packages or
 with other external Python products.</p>
-<p>PyFluent implements a client-server architecture.  PyFluent launches or connects
-with a running Fluent process as a server using Google remote procedure calls,
-or gRPC interfaces, but all you need to interact with is the Python interface.</p>
-<p>You can use PyFluent to programmatically create, interact with and control an
-Ansys Fluent session to create your own customized workspace. In addition, you
-can use PyFluent to enhance your productivity with highly configurable,
-customized scripts.</p>
-</section>
-<section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">#</a></h2>
-<p>The package, <code class="docutils literal notranslate"><span class="pre">ansys-fluent-parametric</span></code>, provides features such as:</p>
-<ul class="simple">
-<li><p>Scripting of a parametric study using Fluent.</p></li>
-</ul>
 </section>
 <section id="documentation-and-issues">
-<h2>Documentation and Issues<a class="headerlink" href="#documentation-and-issues" title="Permalink to this headline">#</a></h2>
-<p>In addition to installation, usage, and contribution information, the PyFluent
-documentation provides API documentation, examples, and code guidelines.</p>
-<p>On the PyFluent Issues page, you can create issues to submit questions,
-report bugs, and request new features. To reach the project support team,
-email <a class="reference external" href="mailto:pyansys&#46;support&#37;&#52;&#48;ansys&#46;com">pyansys<span>&#46;</span>support<span>&#64;</span>ansys<span>&#46;</span>com</a>.</p>
+<h2>Documentation and issues<a class="headerlink" href="#documentation-and-issues" title="Permalink to this headline">#</a></h2>
+<p>In addition to installation and usage information, the PyFluent-Visualization
+documentation provides <a class="reference internal" href="api/index.html#api-reference"><span class="std std-ref">API reference</span></a>, <a class="reference internal" href="examples/index.html#examples"><span class="std std-ref">Examples</span></a>, and <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">Contributing</span></a>
+sections.</p>
+<p>On the <a class="reference external" href="https://github.com/pyansys/pyfluent-parametric/issues">PyFluent-Parametric Issues</a>,
+you can create issues to submit questions, report bugs, and request new features. To reach
+the PyAnsys support team, email <a class="reference external" href="mailto:pyansys&#46;support&#37;&#52;&#48;ansys&#46;com">pyansys<span>&#46;</span>support<span>&#64;</span>ansys<span>&#46;</span>com</a>.</p>
 </section>
 <section id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
-<p>PyFluent is licensed under the MIT license.</p>
-<p>This module makes no commercial claim over Ansys whatsoever. PyFluent extends
-the functionality of Ansys Fluent by adding an additional Python interface to
-Ansys Fluent without changing the core behavior or license of the original
-software. The use of the interactive control of PyFluent requires a legally
-licensed local copy of Ansys Fluent. For more information about Ansys Fluent,
-visit the Ansys Fluent page on the Ansys website.</p>
+<p>PyFluent-Parametric is licensed under the MIT license.</p>
+<p>PyFluent-Parametric makes no commercial claim over Ansys whatsoever.
+It extends the functionality of Fluent by adding an additional Python interface
+to Fluent without changing the core behavior or license of the original software.
+The use of the interactive control of PyFluent-Parametric requires a legally
+licensed local copy of Fluent.</p>
+<p>For more information, see the <a class="reference external" href="https://www.ansys.com/products/fluids/ansys-fluent">Ansys Fluent</a>
+page on the Ansys website.</p>
 </section>
 <section id="project-index">
-<h2>Project Index<a class="headerlink" href="#project-index" title="Permalink to this headline">#</a></h2>
+<h2>Project index<a class="headerlink" href="#project-index" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>

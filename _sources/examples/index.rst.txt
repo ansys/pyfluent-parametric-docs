@@ -30,20 +30,20 @@ Add examples here for pyfluent-parametric ``ansys-fluent-parametric``.
 
 .. _sphx_glr_examples_00-parametric:
 
-Parametric Examples
+Parametric examples
 ===================
-These examples demonstrate how to use the the parametric package to perform
+These examples show how you can use PyFluent-Parameteric to perform
 parametric studies with Fluent.
 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This parametric study workflow example performs these steps">
+    <div class="sphx-glr-thumbcontainer" tooltip="Parametric study workflow">
 
 .. only:: html
 
  .. figure:: /examples/00-parametric/images/thumb/sphx_glr_parametric_static_mixer_1_thumb.png
-     :alt: Parametric Study Workflow
+     :alt: Parametric study workflow
 
      :ref:`sphx_glr_examples_00-parametric_parametric_static_mixer_1.py`
 
