@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>update_all_design_points &#8212; PyFluent-Parametric</title>
+    <title>Parametric examples &#8212; PyFluent-Parametric</title>
     
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
@@ -54,8 +54,8 @@
     <link rel="shortcut icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="update_current_design_point" href="ansys.fluent.parametric.ParametricStudy.update_current_design_point.html" />
-    <link rel="prev" title="set_as_current" href="ansys.fluent.parametric.ParametricStudy.set_as_current.html" />
+    <link rel="next" title="Parametric study workflow" href="parametric_static_mixer_1.html" />
+    <link rel="prev" title="Examples" href="../index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -112,14 +112,14 @@
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="../index.html">
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/index.html">
   API reference
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../examples/index.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
   Examples
  </a>
 </li>
@@ -176,9 +176,8 @@
         <li class="nav-item nav-item-0"><a href="../../index.html">PyFluent-Parametric</a> » </li>
     
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >API reference</a> » </li>
-          <li class="nav-item nav-item-2"><a href="ansys.fluent.parametric.ParametricStudy.html" accesskey="U">ansys.fluent.parametric.ParametricStudy</a> » </li>
-        <li class="nav-item nav-item-this"><a href="">update_all_design_points</a></li> 
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> » </li>
+        <li class="nav-item nav-item-this"><a href="">Parametric examples</a></li> 
       </ul>
     </div>
         </div>
@@ -199,171 +198,22 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ansys.fluent.parametric.DesignPoint.html">
-   ansys.fluent.parametric.DesignPoint
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Parametric examples
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.DesignPoint.capture_simulation_report_data_enabled.html">
-     capture_simulation_report_data_enabled
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.DesignPoint.input_parameters.html">
-     input_parameters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.DesignPoint.output_parameters.html">
-     output_parameters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.DesignPoint.write_data_enabled.html">
-     write_data_enabled
+    <a class="reference internal" href="parametric_static_mixer_1.html">
+     Parametric study workflow
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.html">
-   ansys.fluent.parametric.ParametricStudy
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.add_design_point.html">
-     add_design_point
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.clear_generated_data.html">
-     clear_generated_data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.delete.html">
-     delete
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.delete_design_points.html">
-     delete_design_points
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.duplicate.html">
-     duplicate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.duplicate_design_point.html">
-     duplicate_design_point
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.export_design_table.html">
-     export_design_table
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.get_all_studies.html">
-     get_all_studies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.import_design_table.html">
-     import_design_table
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.initialize.html">
-     initialize
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.load_current_design_point_case_data.html">
-     load_current_design_point_case_data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.rename.html">
-     rename
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.save_journals.html">
-     save_journals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.set_as_current.html">
-     set_as_current
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     update_all_design_points
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.update_current_design_point.html">
-     update_current_design_point
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.update_selected_design_points.html">
-     update_selected_design_points
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.use_base_data.html">
-     use_base_data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.current_design_point.html">
-     current_design_point
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.ParametricStudy.is_current.html">
-     is_current
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ansys.fluent.parametric.InputParameters.html">
-   ansys.fluent.parametric.InputParameters
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.fluent.parametric.InputParameters.get_unit_label.html">
-     get_unit_label
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ansys.fluent.parametric.OutputParameters.html">
-   ansys.fluent.parametric.OutputParameters
-  </a>
  </li>
 </ul>
 
@@ -403,19 +253,15 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="update-all-design-points">
-<h1>update_all_design_points<a class="headerlink" href="#update-all-design-points" title="Permalink to this heading">#</a></h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="ansys.fluent.parametric.ParametricStudy.update_all_design_points">
-<span class="sig-prename descclassname"><span class="pre">ParametricStudy.</span></span><span class="sig-name descname"><span class="pre">update_all_design_points</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ansys.fluent.parametric.ParametricStudy.update_all_design_points" title="Permalink to this definition">#</a></dt>
-<dd><p>Update all design points.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="parametric-examples">
+<span id="sphx-glr-examples-00-parametric"></span><h1>Parametric examples<a class="headerlink" href="#parametric-examples" title="Permalink to this heading">#</a></h1>
+<p>These examples show how you can use PyFluent-Parameteric to perform
+parametric studies with Fluent.</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Parametric study workflow"><img alt="Parametric study workflow" src="../../_images/sphx_glr_parametric_static_mixer_1_thumb.png" />
+<p><a class="reference internal" href="parametric_static_mixer_1.html#sphx-glr-examples-00-parametric-parametric-static-mixer-1-py"><span class="std std-ref">Parametric study workflow</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Parametric study workflow</div>
+</div></div><div class="toctree-wrapper compound">
+</div>
 </section>
 
 
